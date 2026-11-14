@@ -19,6 +19,7 @@ class Spaceship extends Floater
   public double getXSpeed() { return myXspeed; }
   public double getYSpeed() { return myYspeed; }
   public double getPointDirection() { return myPointDirection; }
+  
   public void setAccelerating(boolean accelerating)
   {
     isAccelerating = accelerating;
@@ -41,7 +42,7 @@ class Spaceship extends Floater
     rotate(dRadians);
 
     stroke(50);
-    strokeWeight(1.2f);
+    strokeWeight(1.2);
     fill(210, 215, 220);
     beginShape();
     vertex(5, -6);
@@ -49,7 +50,7 @@ class Spaceship extends Floater
     vertex(-15, -24);
     vertex(-9, -6);
     endShape(CLOSE);
-    
+
     fill(180, 40, 40);
     noStroke();
     beginShape();
@@ -60,7 +61,7 @@ class Spaceship extends Floater
     endShape(CLOSE);
 
     stroke(50);
-    strokeWeight(1.2f);
+    strokeWeight(1.2);
     fill(210, 215, 220);
     beginShape();
     vertex(5, 6);
@@ -81,22 +82,23 @@ class Spaceship extends Floater
     fill(140, 145, 155);
     stroke(40);
     strokeWeight(1);
-    
-    rect(-16.5f, -17.5f, 9, 5);
-    rect(-16.5f, 12.5f, 9, 5);
-    rect(-10.5f, -18.5f, 9, 5);
-    rect(-10.5f, 13.5f, 9, 5);
+
+    rect(-16.5, -17.5, 9, 5);
+    rect(-16.5, 12.5, 9, 5);
+    rect(-10.5, -18.5, 9, 5);
+    rect(-10.5, 13.5, 9, 5);
+
     fill(200, 205, 215);
     stroke(40);
-    strokeWeight(1.2f);
+    strokeWeight(1.2);
 
     beginShape();
-    vertex(20, 0);       
-    vertex(10, -4);      
-    vertex(-11, -4);     
-    vertex(-16, 0);      
-    vertex(-11, 4);      
-    vertex(10, 4);      
+    vertex(20, 0);
+    vertex(10, -4);
+    vertex(-11, -4);
+    vertex(-16, 0);
+    vertex(-11, 4);
+    vertex(10, 4);
     endShape(CLOSE);
 
     fill(40, 120, 180);
@@ -119,6 +121,7 @@ class Spaceship extends Floater
       triangle(-16, 15, -27, 15, -16, 13);
       triangle(-10, -16, -21, -16, -10, -14);
       triangle(-10, 16, -21, 16, -10, 14);
+
       fill(255, 240, 100);
       triangle(-16, -14, -22, -15, -16, -13);
       triangle(-16, 14, -22, 15, -16, 13);
