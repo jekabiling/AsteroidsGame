@@ -1,26 +1,29 @@
 <!DOCTYPE html>
-	<head>
-		<meta charset="utf-8">
-		<title>Asteroids</title>
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" href="styles.css">
-		<script src="processing.js"></script>
-	</head>
-	<body>
-		<header>
-			<h1>Asteroids!</h1>
-		</header>
-			<section id="content">
-				<canvas id="AsteroidsGame" data-processing-sources="AsteroidsGame.pde Floater.pde Spaceship.pde Star.pde">
-				</canvas>
-		    </section>
-	    <footer>
-		    Click to begin! WASD for movement
-			<br>
-			(W to accelerate forward, S to accelerate backwards,
-			A to turn left, D to turn right, and H to activate hyperspace)
-			<br>
-			Made by Jeremy Kabiling Block 1 APCSA 2026
-	    </footer>
-	</body>
+<head>
+    <meta charset="utf-8">
+    <title>Asteroids</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="processing.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Asteroids!</h1>
+    </header>
+
+    <section id="content">
+        <canvas id="AsteroidsGame"
+        data-processing-sources="Asteroid.pde AsteroidsGame.pde Floater.pde Spaceship.pde Star.pde">
+        </canvas>
+    </section>
+
+    <footer>
+        Click to begin! WASD for movement
+        <br>
+        (W to accelerate forward, S to accelerate backwards,
+        A to turn left, D to turn right, and H to activate hyperspace)
+        <br>
+        Made by Jeremy Kabiling Block 1 APCSA 2026
+    </footer>
+</body>
 </html>
