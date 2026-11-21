@@ -9,6 +9,7 @@ boolean downPressed = false;
 
 public void setup(){
   size(600, 600);
+
   bob = new Spaceship();
   stars = new Star[300];
 
@@ -51,8 +52,10 @@ public void draw(){
 
   bob.move();
   bob.show();
+
   for (int i = asteroids.size() - 1; i >= 0; i--){
     Asteroid a = asteroids.get(i);
+
     double distance = dist(
       (float)bob.getCenterX(),
       (float)bob.getCenterY(),
@@ -69,18 +72,20 @@ public void draw(){
     }
   }
 
-  while (asteroids.size() < 12){
+  int attempts = 0;
+  while (asteroids.size() < 12 && attempts < 30){
     Asteroid newAsteroid = new Asteroid(true);
     double spawnDist = dist(
       (float)bob.getCenterX(),
       (float)bob.getCenterY(),
       (float)newAsteroid.getCenterX(),
-      (float)newAsteroid.getCenterY()
-    );
+      (float)newAsteroid.getCenterY());
 
     if (spawnDist > 100){
       asteroids.add(newAsteroid);
     }
+
+    attempts++;
   }
 }
 
@@ -116,3 +121,4 @@ public void keyReleased(){
     downPressed = false;
   }
 }
+
